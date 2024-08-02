@@ -1,0 +1,7 @@
+@import './hero.css';
+
+.container {
+  width: 100%;
+  padding: 0 8px;
+  background-color: aquamarine;
+}
