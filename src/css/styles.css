@@ -1,10 +1,15 @@
+@import './header.css';
 @import './hero.css';
 @import './reset.css';
 @import './swiper.css';
 /* @import './swiper-setting.css'; */
 
+body {
+  font-family: 'Montserrat';
+}
 .container {
+  height: 100%;
   width: 100%;
   padding: 0 8px;
-  background-color: aquamarine;
+  outline: 1px solid red;
 }

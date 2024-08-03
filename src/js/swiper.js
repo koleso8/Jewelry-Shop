@@ -52,30 +52,16 @@ const swiper = new Swiper('.swiper', {
   //     //*______________________________________________paginations________________
   //   },
 
-  //   scrollbar: {
-  //     el: '.swiper-scrollbar',
-  //     draggable: true,
-  //   },
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+  },
 
   keyboard: {
     enabled: true,
     onlyInViewport: true,
     pageUpDown: true,
   },
-
-  mousewheel: {
-    sensitivity: 1,
-  },
-
-  //   slidesPerView: 1.5,
-  // centeredSlides: true,
-  // slidesPerGroup: 2.5,
-
-  spaceBetween: 0,
-
-  initialSlide: 0,
-
-  //   freeMode: true,
 
   //*#region Effect
 
@@ -84,36 +70,11 @@ const swiper = new Swiper('.swiper', {
     crossFade: true,
   },
 
-  //   effect: 'flip',
-  //   flipEffect: {
-  //     slideShadows: true,
-  //     limitRotation: true,
-  //   },
-
-  //   effect: 'cube',
-  //   cubeEffect: {
-  //     slideShadows: false,
-  //     shadow: true,
-  //     shadowOffset: 40,
-  //     shadowScale: 0.95,
-  //   },
-
-  //   effect: 'coverflow', //*___+slidesPerView___
-  //   coverflowEffect: {
-  //     slideShadows: true,
-  //     rotate: 60,
-  //     stretch: 50,
-  //   },
-
   //   #endregion
 
   //   breakpoints: {
   //     320: { slidesPerView: 1 },
   //     480: { slidesPerView: 2 },
   //     992: { slidesPerView: 3 },
-  //   },
-  //   zoom: {
-  //     maxRatio: 5,
-  //     minRatio: 1,
   //   },
 });

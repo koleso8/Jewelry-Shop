@@ -1,8 +1,12 @@
 .swiper-slide img {
   width: 100%;
-  height: 500px;
+  object-fit: cover;
 }
 
 .swiper-slide {
+  object-fit: cover;
   overflow: hidden;
+}
+
+.swiper-scrollbar {
 }
