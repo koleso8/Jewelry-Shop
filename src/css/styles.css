@@ -1,4 +1,7 @@
 @import './hero.css';
+@import './reset.css';
+@import './swiper.css';
+/* @import './swiper-setting.css'; */
 
 .container {
   width: 100%;
