@@ -1,9 +1,14 @@
+.swiper {
+  height: 280px;
+}
+
 .swiper-slide img {
-  width: 100%;
-  object-fit: cover;
+  position: absolute;
+  top: -125px;
 }
 
 .swiper-slide {
+  top: -8px;
   object-fit: cover;
   overflow: hidden;
 }
