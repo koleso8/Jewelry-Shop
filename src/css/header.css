@@ -8,6 +8,7 @@
     justify-content: space-between;
     align-items: center;
   }
+  background-color: rgb(246, 255, 196);
 }
 
 .nav-list {
@@ -28,7 +29,7 @@
   height: 30px;
   border-radius: 10px;
   border: 1px solid rgb(255, 225, 0);
-  background-color: rgba(238, 255, 2, 0.559);
+  background-color: rgba(238, 255, 2, 0.966);
 }
 
 .menu {
@@ -40,8 +41,8 @@
   left: 25%;
   opacity: 0;
   pointer-events: none;
-  background-color: rgba(238, 255, 2, 0.559);
-  height: 50vh;
+  background-color: rgb(238, 255, 0);
+  height: 70vh;
   width: 50vw;
   align-items: center;
   justify-content: center;

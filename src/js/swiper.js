@@ -65,7 +65,7 @@ const swiper = new Swiper('.swiper', {
 
   //*#region Effect
 
-  effect: 'fade',
+  effect: 'card',
   fadeEffect: {
     crossFade: true,
   },

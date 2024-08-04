@@ -1,13 +1,17 @@
 .hero {
   text-align: center;
+  height: 300px;
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(2, 0, 36, 0) 100%
+    ),
+    url(../img/IMG_4985.webp);
+  background-size: cover;
+  background-position: 0px -70px;
 }
 
 .bg {
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.9) 0%,
-    rgba(2, 0, 36, 0) 100%
-  );
   width: 100%;
   height: 196px;
   position: absolute;
@@ -16,10 +20,14 @@
 }
 
 .hero-title {
-  color: aliceblue;
+  padding-top: 100px;
+  color: rgb(241, 255, 180);
   font-size: 60px;
-  position: absolute;
-  top: 100px;
-  left: 22px;
   z-index: 20;
+}
+
+.wrapper {
+  display: none;
+  width: 100vw;
+  height: 100vh;
 }

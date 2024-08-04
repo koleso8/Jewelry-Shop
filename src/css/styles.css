@@ -2,16 +2,23 @@
 @import './hero.css';
 @import './reset.css';
 @import './swiper.css';
+@import './benefits.css';
 /* @import './swiper-setting.css'; */
 
 body {
   font-family: 'Montserrat';
 }
+
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.708);
+  overflow-y: hidden;
+}
+
 .container {
   height: 100%;
   width: 100%;
   padding: 0 8px;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 .visually-hidden {
