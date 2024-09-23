@@ -1,5 +1,13 @@
+import Navigation from './Navigation';
+import UserMenu from './UserMenu';
+
 const Header = () => {
-  return <header>headrer</header>;
+  return (
+    <header>
+      <Navigation />
+      <UserMenu />
+    </header>
+  );
 };
 
 export default Header;
