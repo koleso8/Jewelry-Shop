@@ -14,6 +14,7 @@ import storage from 'redux-persist/lib/storage';
 
 import { favoriteReducer } from './favorite/slice';
 import { basketReducer } from './basket/slice';
+import { catalogItemsReducer } from './catalogItems/slice';
 
 const persistConfig = {
   key: 'root',
@@ -29,6 +30,7 @@ export const store = configureStore({
   reducer: {
     favorite: persistedReducer,
     basket: persistedBasketReducer,
+    catalogItems: catalogItemsReducer,
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
