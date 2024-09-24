@@ -3,7 +3,7 @@ import UserMenu from './UserMenu';
 
 const Header = () => {
   return (
-    <header>
+    <header className="flex justify-between w-11/12 border-b-[1px]">
       <Navigation />
       <UserMenu />
     </header>

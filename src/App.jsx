@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+
 import Layout from './pages/Layout';
 import HomePage from './pages/HomePage';
 import Favorites from './pages/Favorites';
@@ -8,17 +9,15 @@ import Catalog from './pages/Catalog';
 
 const App = () => {
   return (
-    <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/catalog" element={<Catalog />} />
-          <Route path="/favorites" element={<Favorites />} />
-          <Route path="/basket" element={<Basket />} />
-          <Route path="/about" element={<AboutMe />} />
-        </Routes>
-      </Layout>
-    </Router>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/catalog" element={<Catalog />} />
+        <Route path="/favorites" element={<Favorites />} />
+        <Route path="/basket" element={<Basket />} />
+        <Route path="/about" element={<AboutMe />} />
+      </Routes>
+    </Layout>
   );
 };
 
