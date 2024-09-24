@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  favorites: [{ asd: 'asd' }, { asd: 'asd' }],
+  favorites: [],
 };
 
 const slice = createSlice({
