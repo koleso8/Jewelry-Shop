@@ -9,6 +9,9 @@ const Navigation = () => {
       <NavLink className="p-[15px]" to="/catalog">
         Catalog
       </NavLink>
+      <NavLink className="p-[15px]" to="/about">
+        About
+      </NavLink>
     </nav>
   );
 };
