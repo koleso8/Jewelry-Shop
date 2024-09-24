@@ -10,12 +10,12 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-zinc-100 flex justify-center items-center  w-screen border-b-[1px] fixed z-10">
-      <section className=" flex  justify-between items-center w-11/12">
-        {isTablet && <Navigation />}
-        <UserMenu />
+    <header className="bg-white flex justify-center items-center  w-screen border-b-[1px] fixed z-10">
+      <section className=" flex  justify-between items-center w-11/12 z-10 ">
+        {isTablet && <Navigation setIsOpen={setIsOpen} />}
+        <UserMenu setIsOpen={setIsOpen} />
         {isMobile && <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />}
-        {isMobile && <MobileMenu isOpen={isOpen} />}
+        {isMobile && <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />}
       </section>
     </header>
   );
