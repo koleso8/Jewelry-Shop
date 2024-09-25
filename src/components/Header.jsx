@@ -4,7 +4,7 @@ import BurgerMenu from './BurgerMenu';
 import Navigation from './Navigation';
 import UserMenu from './UserMenu';
 import MobileMenu from './MobileMenu';
-import CustomModal from './CustomModal';
+// import CustomModal from './CustomModal';
 
 const Header = () => {
   const { isMobile, isTablet } = useScreenWidth();
@@ -20,7 +20,7 @@ const Header = () => {
         <UserMenu setIsOpen={setIsOpen} />
         {isMobile && <BurgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />}
         {isMobile && <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />}
-        <CustomModal />
+        {/* <CustomModal /> */}
       </section>
     </header>
   );

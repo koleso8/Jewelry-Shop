@@ -1,8 +1,13 @@
+import CatalogList from '../components/catalog/CatalogList';
 import { scrollToTop } from '../helpers/scrollToTop';
 
 const Catalog = () => {
   scrollToTop();
-  return <div>catalog</div>;
+  return (
+    <section>
+      <CatalogList />
+    </section>
+  );
 };
 
 export default Catalog;
