@@ -10,7 +10,7 @@ export const toastStyles = {
     color: 'black',
     fontSize: '16px',
     padding: '10px',
-    fontFamily: 'Poppins, sans-serif',
+    fontFamily: 'Cuprum, sans-serif',
     borderRadius: '8px',
   },
   theme: 'colored',
@@ -20,6 +20,6 @@ export const toastContainerStyles = {
   position: 'bottom-center',
   padding: '10px',
   color: 'white',
-  fontFamily: 'Poppins, sans-serif',
+  fontFamily: 'Cuprum, sans-serif',
   borderRadius: '8px',
 };

@@ -5,3 +5,7 @@
 .active {
   color: blue;
 }
+
+html {
+  font-family: 'Cuprum', sans-serif;
+}

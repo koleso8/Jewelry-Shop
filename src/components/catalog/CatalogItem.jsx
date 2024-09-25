@@ -2,10 +2,15 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectFavorites } from '../../redux/favorite/selectors';
 import { GoHeart, GoHeartFill } from 'react-icons/go';
 import { addToFavorite, deleteFavorite } from '../../redux/favorite/slice';
+import { selectBacketItems } from '../../redux/basket/selectors';
+import ButtonAddOrDelete from '../basket/ButtonAddOrDelete';
 
 const CatalogItem = ({ item }) => {
-  const dispath = useDispatch();
+  const dispatch = useDispatch();
   const isFavorite = useSelector(selectFavorites).find(
+    card => card.id === item.id
+  );
+  const onBasket = useSelector(selectBacketItems).find(
     card => card.id === item.id
   );
 
@@ -16,31 +21,29 @@ const CatalogItem = ({ item }) => {
         src={item.img}
         alt={item.alt}
       />
-      <span className="absolute top-4 right-4">
+      <button className="absolute top-4 right-4">
         {!isFavorite ? (
           <GoHeart
             className="cursor-pointer"
             color="white"
             size="24px"
-            onClick={() => dispath(addToFavorite(item))}
+            onClick={() => dispatch(addToFavorite(item))}
           />
         ) : (
           <GoHeartFill
             className="cursor-pointer"
             color="#3470ff"
             size="24px"
-            onClick={() => dispath(deleteFavorite(item))}
+            onClick={() => dispatch(deleteFavorite(item))}
           />
         )}
-      </span>
+      </button>
 
       <h3 className="text-base font-bold capitalize">{item.title}</h3>
       <p className="text-sm">{item.comment}</p>
       <p className="text-xs text-gray-600">Ширина: {item.width}</p>
       <p className="text-xs text-gray-600 mb-3">Довжина: {item.lengths}</p>
-      <button className="bg-[#3470ff] p-3 rounded-3xl text-white font-bold flex items-center justify-center">
-        {item.price}
-      </button>
+      <ButtonAddOrDelete item={item} onBasket={onBasket} />
     </li>
   );
 };
