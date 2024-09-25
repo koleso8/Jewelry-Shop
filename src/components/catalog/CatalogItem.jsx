@@ -15,7 +15,7 @@ const CatalogItem = ({ item }) => {
   );
 
   return (
-    <li className="flex flex-col p-3 rounded-2xl bg-white w-full md:w-52 relative">
+    <li className="flex flex-col p-3 rounded-2xl bg-white w-full relative  md:w-52 md:h-80">
       <img
         className="w-full h-52 overflow-hidden object-cover  rounded-xl"
         src={item.img}
@@ -40,7 +40,7 @@ const CatalogItem = ({ item }) => {
       </button>
 
       <h3 className="text-base font-bold capitalize">{item.title}</h3>
-      <p className="text-sm">{item.comment}</p>
+      <p className="text-sm md:hidden">{item.comment}</p>
       <p className="text-xs text-gray-600">Ширина: {item.width}</p>
       <p className="text-xs text-gray-600 mb-3">Довжина: {item.lengths}</p>
       <ButtonAddOrDelete item={item} onBasket={onBasket} />

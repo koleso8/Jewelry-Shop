@@ -5,7 +5,7 @@ const CatalogList = () => {
   const items = catalogItems;
 
   return (
-    <ul className="flex flex-wrap gap-3">
+    <ul className="flex flex-wrap gap-3 items-center justify-center">
       {items.map(item => (
         <CatalogItem key={item.id} item={item} />
       ))}

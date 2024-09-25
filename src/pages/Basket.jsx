@@ -3,8 +3,6 @@ import { selectAllPrice, selectBacketItems } from '../redux/basket/selectors';
 import BasketList from '../components/basket/BasketList';
 import WithoutBasketItems from '../components/basket/WithoutBasketItems';
 import { scrollToTop } from '../helpers/scrollToTop';
-import { TbTruckDelivery } from 'react-icons/tb';
-import { FaHome } from 'react-icons/fa';
 import { useEffect } from 'react';
 import { setAllPrice } from '../redux/basket/slice';
 
@@ -19,17 +17,19 @@ const Basket = () => {
   });
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 w-full md:text-2xl md:gap-8 lg:text-3xl">
       {basketItems.length ? <BasketList /> : <WithoutBasketItems />}
       {!!basketItems.length && (
-        <button
-          className="bg-[#3470ff] px-2  rounded-3xl h-full text-white  flex items-center justify-around"
-          onClick={() => dispatch()}
-        >
-          <TbTruckDelivery size="50px" />
-          Оформити замовлення{allPrice}
-          <FaHome size="50px" />
-        </button>
+        <div className=" bg-white rounded-3xl h-full flex items-center justify-between  text-black pl-4 font-extrabold ">
+          <p className=" w-[50%] ">Загальна вартість :</p>
+          <p className="">{allPrice} грн.</p>
+          <button
+            className="bg-blue-700 text-white  h-12 rounded-3xl px-5  "
+            onClick={() => dispatch()}
+          >
+            ОФОРМИТИ
+          </button>
+        </div>
       )}
     </div>
   );

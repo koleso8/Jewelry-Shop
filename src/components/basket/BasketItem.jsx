@@ -4,7 +4,6 @@ import {
   minusCount,
   plusCount,
 } from '../../redux/basket/slice';
-import { useState } from 'react';
 import { IoMdClose } from 'react-icons/io';
 
 const BasketItem = ({ item }) => {
@@ -13,16 +12,18 @@ const BasketItem = ({ item }) => {
   const price = item.price * item.count;
 
   return (
-    <li className=" w-full bg-white rounded-lg flex h-20 justify-between items-start font-bold">
+    <li className=" w-full bg-white rounded-lg flex h-20 justify-between items-start font-bold md:h-28 ">
       <img className="h-full rounded-lg" src={item.img} alt={item.alt} />
-      <div className="w-[60%] ">
-        <h3 className="first-letter:capitalize font-bold text-lg mb-4">
+      <div className="flex flex-col justify-around w-[60%] h-full lg:flex-row lg:items-center lg:w-[80%] ">
+        <h3 className="first-letter:capitalize font-bold text-lg underline md:text-2xl lg:text-3xl ">
           {item.title}
         </h3>
-        <div className="flex gap-6">
-          <p className="underline text-center rounded-3xl ">{price} грн.</p>
+        <div className="flex justify-between lg:w-[40%]">
+          <p className="text-center rounded-3xl md:text-2xl lg:text-3xl">
+            {price} грн.
+          </p>
 
-          <span className="flex gap-2">
+          <span className="flex gap-2 md:text-2xl lg:text-3xl">
             <button
               className="px-2 border rounded-lg bg-slate-100"
               onClick={() => dispatch(minusCount(item.id))}

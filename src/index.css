@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .active {
-  color: blue;
+  color: #1d4ed8;
 }
 
 html {
