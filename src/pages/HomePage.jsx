@@ -1,7 +1,8 @@
+import { useEffect } from 'react';
 import { scrollToTop } from '../helpers/scrollToTop';
 
 const HomePage = () => {
-  scrollToTop();
+  useEffect(() => scrollToTop());
 
   return <div>Home</div>;
 };

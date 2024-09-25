@@ -1,26 +1,31 @@
 import { useDispatch } from 'react-redux';
 import { deleteFromBasket } from '../../redux/basket/slice';
-import { TbBasketOff } from 'react-icons/tb';
+import { useState } from 'react';
+import { IoMdClose } from 'react-icons/io';
 
 const BasketItem = ({ item }) => {
   const dispatch = useDispatch();
-  console.log(item);
+
+  const [count, setCount] = useState(1);
 
   return (
-    <li className=" w-full bg-white rounded-lg flex h-20 justify-between font-bold">
-      <span className="justify-between p-2">
+    <li className=" w-full bg-white rounded-lg flex h-20 justify-between items-center font-bold">
+      <div className="justify-between p-1 w-[60%]">
         <h3 className="first-letter:capitalize font-bold text-lg">
           {item.title}
         </h3>
-        <p className="p-2 bg-[#3470ff] text-white w-24 text-center rounded-3xl ">
-          {item.price} грн
-        </p>
-      </span>
+        <span className="flex gap-4 items-center">
+          <p className="p-2 underline text-center rounded-3xl ">
+            {item.price} грн
+          </p>
+        </span>
+      </div>
+      <img className="h-full rounded-lg" src={item.img} alt={item.alt} />
       <button
-        className="bg-[#3470ff] px-2  rounded-l-3xl h-full text-white  flex items-center justify-center"
+        className="p-1 rounded-l-3xl h-10 flex items-center justify-center"
         onClick={() => dispatch(deleteFromBasket(item))}
       >
-        <TbBasketOff size="50px" />
+        <IoMdClose size="26px" />
       </button>
     </li>
   );

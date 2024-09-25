@@ -1,7 +1,8 @@
+import { useEffect } from 'react';
 import { scrollToTop } from '../helpers/scrollToTop';
 
 const AboutMe = () => {
-  scrollToTop();
+  useEffect(() => scrollToTop());
   return <div>About me</div>;
 };
 

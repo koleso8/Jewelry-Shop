@@ -5,9 +5,10 @@ import WithoutBasketItems from '../components/basket/WithoutBasketItems';
 import { scrollToTop } from '../helpers/scrollToTop';
 import { TbTruckDelivery } from 'react-icons/tb';
 import { FaHome } from 'react-icons/fa';
+import { useEffect } from 'react';
 
 const Basket = () => {
-  scrollToTop();
+  useEffect(() => scrollToTop());
   const dispatch = useDispatch();
   const basketItems = useSelector(selectBacketItems);
   return (
