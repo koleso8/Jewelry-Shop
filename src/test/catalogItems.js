@@ -1,6 +1,7 @@
 export const catalogItems = [
   {
     id: 1,
+    count: 1,
     img: 'https://instagram.fnlv2-1.fna.fbcdn.net/v/t39.30808-6/451070572_17958745142789140_117763220721879326_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fnlv2-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=G0IAqAGbnqoQ7kNvgFJcS5b&edm=APoiHPcAAAAA&ccb=7-5&ig_cache_key=MzQxMTg3ODkyMTM4MzM3OTM2MA%3D%3D.3-ccb7-5&oh=00_AYD-ZAfnmUSqIsVZ-KgD_BY6L3nyBssezgS1EXlb4_Twbg&oe=66F99C79&_nc_sid=22de04',
     alt: 'шоколадна криза',
     title: 'Шоколадна криза',
@@ -12,6 +13,7 @@ export const catalogItems = [
   },
   {
     id: 2,
+    count: 1,
     img: 'https://instagram.fnlv2-1.fna.fbcdn.net/v/t39.30808-6/445192173_17952718580789140_3751592315139718247_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fnlv2-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=BNAuhgNrYLUQ7kNvgFM0qMC&edm=APoiHPcAAAAA&ccb=7-5&ig_cache_key=MzM3ODAwNjcxNDI1NjIyNzQ5Ng%3D%3D.3-ccb7-5&oh=00_AYC2sZUPMOzzvfenOUYyFrva7KIZ7iZKuhACRJyI1f0-uA&oe=66F97DD8&_nc_sid=22de04',
     alt: 'силянка з ромбами',
     title: 'силянка з ромбами',
@@ -24,6 +26,7 @@ export const catalogItems = [
   },
   {
     id: 3,
+    count: 1,
     img: 'https://instagram.fnlv2-1.fna.fbcdn.net/v/t39.30808-6/440783316_17949170603789140_602253572327789599_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE3OTguc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fnlv2-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=rLx6rxcdDpQQ7kNvgFrngS3&edm=APoiHPcAAAAA&ccb=7-5&ig_cache_key=MzM1Njk3Njc0MzM3NjI4Njc0OA%3D%3D.3-ccb7-5&oh=00_AYBHumQx59H3sSt0-zeVuVQA6TU_Zo1fqaeAmDH6aRg5oA&oe=66F96EF3&_nc_sid=22de04',
     alt: 'велика криза',
     title: 'велика криза',
@@ -36,6 +39,7 @@ export const catalogItems = [
   },
   {
     id: 4,
+    count: 1,
     img: 'https://instagram.fnlv2-1.fna.fbcdn.net/v/t39.30808-6/437795908_17947422470789140_6205624256610213566_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE4MDAuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fnlv2-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=5nV0C8kP54gQ7kNvgE6P2p6&_nc_gid=2d195638f9994f67834b6714736c5189&edm=APoiHPcAAAAA&ccb=7-5&ig_cache_key=MzM0NjEwNzk0Njk1MjEzMTk1Mg%3D%3D.3-ccb7-5&oh=00_AYA_YqFZoi8OFBXlFJti_o8dhF-txVdnpztlz_p-RqTLMQ&oe=66F96CD7&_nc_sid=22de04',
     alt: 'силянка з ромбами',
     title: 'силянка з ромбами',
@@ -48,6 +52,7 @@ export const catalogItems = [
   },
   {
     id: 5,
+    count: 1,
     img: 'https://instagram.fnlv2-1.fna.fbcdn.net/v/t39.30808-6/432321234_17944003457789140_4566519622605516112_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE3NDEuc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fnlv2-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=d-cExdfozXsQ7kNvgFjeV5a&_nc_gid=b34ca5d7f5cb43b9a0802152201d1b34&edm=APoiHPcAAAAA&ccb=7-5&ig_cache_key=MzMyNTA4NTQ1ODkxOTI3NjIzOQ%3D%3D.3-ccb7-5&oh=00_AYCsv9TMCrLh9EHJJbnZhdM6ANx6tCHgv8UqRJ_oXaCVNA&oe=66F9737A&_nc_sid=22de04',
     alt: 'Криза та манжети',
     title: 'Криза та манжети',
@@ -60,6 +65,7 @@ export const catalogItems = [
   },
   {
     id: 6,
+    count: 1,
     img: 'https://instagram.fnlv2-1.fna.fbcdn.net/v/t39.30808-6/430118890_17943427415789140_1478047930974881688_n.jpg?stp=dst-jpg_e35&efg=eyJ2ZW5jb2RlX3RhZyI6ImltYWdlX3VybGdlbi4xNDQweDE3Njguc2RyLmYzMDgwOC5kZWZhdWx0X2ltYWdlIn0&_nc_ht=instagram.fnlv2-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=7TncrA-KzuIQ7kNvgGJ1Cxk&_nc_gid=b34ca5d7f5cb43b9a0802152201d1b34&edm=APoiHPcAAAAA&ccb=7-5&ig_cache_key=MzMyMTQ5MjcyNzI4MjA1OTg4Nw%3D%3D.3-ccb7-5&oh=00_AYA6failT8C-D43fLpJgaStjvkNGBIkwErqqnPWSWT_7TA&oe=66F9749D&_nc_sid=22de04',
     alt: 'Блакитна криза',
     title: 'Блакитна криза',

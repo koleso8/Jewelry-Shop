@@ -4,6 +4,7 @@ import { toastStyles } from '../../helpers/toastStyles';
 
 const initialState = {
   items: [],
+  allPrice: 0,
 };
 
 const slice = createSlice({
@@ -18,8 +19,34 @@ const slice = createSlice({
       state.items = state.items.filter(item => item.id !== action.payload.id);
       toast.error('Видалено з кошика', toastStyles);
     },
+    plusCount: (state, action) => {
+      state.items.map(item =>
+        item.id === action.payload ? (item.count += 1) : item
+      );
+    },
+    minusCount: (state, action) => {
+      state.items.map(item =>
+        item.id === action.payload
+          ? item.count === 0
+            ? 0
+            : (item.count -= 1)
+          : item
+      );
+    },
+    setAllPrice: state => {
+      state.allPrice = state.items.reduce(
+        (acc, item) => acc + item.price * item.count,
+        0
+      );
+    },
   },
 });
-
+//
 export const basketReducer = slice.reducer;
-export const { addToBasket, deleteFromBasket } = slice.actions;
+export const {
+  addToBasket,
+  deleteFromBasket,
+  setAllPrice,
+  plusCount,
+  minusCount,
+} = slice.actions;
