@@ -4,21 +4,21 @@ const Navigation = ({ setIsOpen }) => {
   return (
     <nav className="flex flex-col justify-around items-center font-bold text-black gap-7 md:flex-row md:gap-0">
       <NavLink className="p-[15px]" to="/" onClick={() => setIsOpen(false)}>
-        Home
+        Головна
       </NavLink>
       <NavLink
         className="p-[15px]"
         to="/catalog"
         onClick={() => setIsOpen(false)}
       >
-        Catalog
+        Каталог
       </NavLink>
       <NavLink
         className="p-[15px]"
         to="/about"
         onClick={() => setIsOpen(false)}
       >
-        About
+        Про мене
       </NavLink>
     </nav>
   );
