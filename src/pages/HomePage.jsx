@@ -4,7 +4,9 @@ import { scrollToTop } from '../helpers/scrollToTop';
 const HomePage = () => {
   useEffect(() => scrollToTop());
 
-  return <div>Home</div>;
+  return (
+    <section className="flex items-center justify-center">HomePage</section>
+  );
 };
 
 export default HomePage;
