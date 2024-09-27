@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 const Navigation = ({ setIsOpen }) => {
   return (
-    <nav className="flex flex-col justify-around items-center font-bold text-black gap-7 md:flex-row md:gap-0">
+    <nav className="flex flex-col justify-around items-center font-bold text-black text-4xl gap-7 md:flex-row md:gap-0 md:text-lg">
       <NavLink className="p-[15px]" to="/" onClick={() => setIsOpen(false)}>
         Головна
       </NavLink>

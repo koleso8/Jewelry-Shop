@@ -21,7 +21,7 @@ const Basket = () => {
       {basketItems.length ? <BasketList /> : <WithoutBasketItems />}
       {!!basketItems.length && (
         <div className=" bg-white rounded-3xl h-full flex items-center justify-between  text-black pl-4 font-extrabold ">
-          <p className=" w-[50%] ">Загальна вартість :</p>
+          <p className=" w-[36%] md:w-[50%] ">Загальна вартість :</p>
           <p className="">{allPrice} грн.</p>
           <button
             className="bg-blue-700 text-white  h-12 rounded-3xl px-5  "
