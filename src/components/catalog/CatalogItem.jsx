@@ -4,6 +4,7 @@ import { GoHeart, GoHeartFill } from 'react-icons/go';
 import { addToFavorite, deleteFavorite } from '../../redux/favorite/slice';
 import { selectBacketItems } from '../../redux/basket/selectors';
 import ButtonAddOrDelete from '../basket/ButtonAddOrDelete';
+import MyLoader from './MyLoader';
 
 const CatalogItem = ({ item }) => {
   const dispatch = useDispatch();
@@ -16,11 +17,13 @@ const CatalogItem = ({ item }) => {
 
   return (
     <li className="flex flex-col p-3 rounded-2xl bg-white w-full relative  md:w-52 md:h-80">
-      <img
-        className="w-full h-52 overflow-hidden object-cover  rounded-xl"
-        src={item.img}
-        alt={item.alt}
-      />
+      {(
+        <img
+          className="w-full h-52 overflow-hidden object-cover  rounded-xl"
+          src={item.img}
+          alt={item.alt}
+        />
+      ) || <MyLoader />}
       <button className="absolute top-4 right-4">
         {!isFavorite ? (
           <GoHeart
