@@ -1,16 +1,21 @@
 const headerHide = () => {
   let lastScroll = 0;
-  const defaultOffset = 200;
+  //   const defaultOffset = 200;
+  //breakPoint for scroll
 
   const header = document.querySelector('.header');
-  console.log(header);
 
   const scrollPosition = () =>
     window.pageYOffset || document.documentElement.scrollTop;
   const containHide = () => header.classList.contains('hideHeader');
 
   window.addEventListener('scroll', () => {
-    if (scrollPosition() > lastScroll && !containHide()) {
+    if (
+      scrollPosition() > lastScroll &&
+      !containHide()
+      //     &&
+      //   scrollPosition() > defaultOffset
+    ) {
       //scroll dowm
       header.classList.add('hideHeader');
     } else if (scrollPosition() < lastScroll && containHide()) {
