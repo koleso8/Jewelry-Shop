@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  font-family: 'Cuprum', sans-serif;
+}
+
 .active {
   color: #1d4ed8;
 }
 
-html {
-  font-family: 'Cuprum', sans-serif;
+.hideHeader {
+  transform: translateY(-100%);
 }
