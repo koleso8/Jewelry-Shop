@@ -5,6 +5,7 @@ import WithoutBasketItems from '../components/basket/WithoutBasketItems';
 import { scrollToTop } from '../helpers/scrollToTop';
 import { useEffect } from 'react';
 import { setAllPrice } from '../redux/basket/slice';
+import BuyButton from '../components/basket/BuyButton';
 
 const Basket = () => {
   const dispatch = useDispatch();
@@ -23,12 +24,7 @@ const Basket = () => {
         <div className=" bg-white rounded-3xl h-full flex items-center justify-between  text-black pl-4 font-extrabold ">
           <p className=" w-[36%] md:w-[50%] ">Загальна вартість :</p>
           <p className="">{allPrice} грн.</p>
-          <button
-            className="bg-blue-700 text-white  h-12 rounded-3xl px-5  "
-            onClick={() => dispatch()}
-          >
-            ОФОРМИТИ
-          </button>
+          <BuyButton />
         </div>
       )}
     </div>

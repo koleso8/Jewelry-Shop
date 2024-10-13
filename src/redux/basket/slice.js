@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import toast from 'react-hot-toast';
 import { toastStyles } from '../../helpers/toastStyles';
+import { sendMessaageToTGThunk } from './operation';
 
 const initialState = {
   items: [],
@@ -39,6 +40,18 @@ const slice = createSlice({
         0
       );
     },
+  },
+  extraReducers: builder => {
+    builder
+      .addCase(sendMessaageToTGThunk.pending, (state, action) => {
+        console.log(`pending action : ${action}`);
+      })
+      .addCase(sendMessaageToTGThunk.fulfilled, (state, action) => {
+        console.log(`fullfield action : ${action}`);
+      })
+      .addCase(sendMessaageToTGThunk.rejected, (state, action) => {
+        console.log(`rejected action : ${action}`);
+      });
   },
 });
 //

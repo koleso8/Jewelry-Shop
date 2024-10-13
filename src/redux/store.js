@@ -20,7 +20,7 @@ const persistConfig = {
   key: 'root',
   version: 1,
   storage,
-  whiteList: [],
+  whiteList: ['basket', 'favorites'],
 };
 
 const persistedReducer = persistReducer(persistConfig, favoriteReducer);
