@@ -5,7 +5,7 @@ import * as TG from '../../helpers/api';
 export const sendMessaageToTGThunk = createAsyncThunk(
   'basket/sendTG',
   async (payload, thunkAPI) => {
-    const text = `заказ ${payload}`;
+    const text = `замовлення: ${payload}`;
     try {
       const { data } = await axios.post(TG.API, {
         chat_id: TG.TG_CHAT_ID,

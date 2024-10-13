@@ -6,6 +6,7 @@ import { sendMessaageToTGThunk } from './operation';
 const initialState = {
   items: [],
   allPrice: 0,
+  loadingBasket: false,
 };
 
 const slice = createSlice({
@@ -44,13 +45,16 @@ const slice = createSlice({
   extraReducers: builder => {
     builder
       .addCase(sendMessaageToTGThunk.pending, (state, action) => {
-        console.log(`pending action : ${action}`);
+        state.loadingBasket = true;
+        console.log(action);
       })
       .addCase(sendMessaageToTGThunk.fulfilled, (state, action) => {
-        console.log(`fullfield action : ${action}`);
+        state.loadingBasket = false;
+        console.log(action);
       })
       .addCase(sendMessaageToTGThunk.rejected, (state, action) => {
-        console.log(`rejected action : ${action}`);
+        state.loadingBasket = false;
+        console.log(action);
       });
   },
 });
