@@ -6,6 +6,7 @@ import { sendMessaageToTGThunk } from './operation';
 const initialState = {
   items: [],
   allPrice: 0,
+  currentItems: [],
   loadingBasket: false,
 };
 
@@ -41,6 +42,12 @@ const slice = createSlice({
         0
       );
     },
+    addToCurrentB: (state, { payload }) => {
+      state.currentItems = [...payload];
+    },
+    deleteCurrentB: state => {
+      state.currentItems = [];
+    },
   },
   extraReducers: builder => {
     builder
@@ -66,4 +73,6 @@ export const {
   setAllPrice,
   plusCount,
   minusCount,
+  addToCurrentB,
+  deleteCurrentB,
 } = slice.actions;

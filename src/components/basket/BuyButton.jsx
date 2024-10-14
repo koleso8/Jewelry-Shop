@@ -1,24 +1,15 @@
-import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { sendMessaageToTGThunk } from '../../redux/basket/operation';
-import {
-  selectAllPrice,
-  selectBacketItems,
-} from '../../redux/basket/selectors';
+import { selectBacketItems } from '../../redux/basket/selectors';
+import { addToCurrentB } from '../../redux/basket/slice';
 
 const BuyButton = () => {
   const dispatch = useDispatch();
-  const items = useSelector(selectBacketItems).map(
-    item => `\n${item.title} - ${item.count}шт.(${item.count * item.price} грн)`
-  );
-  const allPrice = useSelector(selectAllPrice);
-  const res = `прикраси: ${items} \nЗагальна вартість : ${allPrice} грн`;
-  console.log(res);
+  const items = useSelector(selectBacketItems);
 
   return (
     <button
       className="bg-blue-700 text-white  h-12 rounded-3xl px-5  "
-      onClick={() => dispatch(sendMessaageToTGThunk(res))}
+      onClick={() => dispatch(addToCurrentB(items))}
     >
       ОФОРМИТИ
     </button>

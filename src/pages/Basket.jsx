@@ -6,6 +6,7 @@ import { scrollToTop } from '../helpers/scrollToTop';
 import { useEffect } from 'react';
 import { setAllPrice } from '../redux/basket/slice';
 import BuyButton from '../components/basket/BuyButton';
+import CustomModal from '../components/CustomModal';
 
 const Basket = () => {
   const dispatch = useDispatch();
@@ -25,6 +26,7 @@ const Basket = () => {
           <p className=" w-[36%] md:w-[50%] ">Загальна вартість :</p>
           <p className="">{allPrice} грн.</p>
           <BuyButton />
+          <CustomModal />
         </div>
       )}
     </div>
