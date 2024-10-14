@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectCurrentItems } from '../redux/basket/selectors';
 import { deleteCurrentB } from '../redux/basket/slice';
 import OrderForm from './basket/OrderForm';
+import { IoMdClose } from 'react-icons/io';
 // import { selectCurrentItem } from '../redux/catalogItems/selectors';
 
 const CustomModal = () => {
@@ -21,7 +22,7 @@ const CustomModal = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundColor: 'rgba(0, 0, 0, 0.75)',
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',
         },
         content: {
           position: 'absolute',
@@ -29,11 +30,10 @@ const CustomModal = () => {
           left: '20%',
           right: '20%',
           bottom: '20%',
-          border: '1px solid #ccc',
+          borderRadius: '16px',
           background: '#fff',
           overflow: 'auto',
           WebkitOverflowScrolling: 'touch',
-          borderRadius: '4px',
           outline: 'none',
           padding: '20px',
         },
@@ -47,7 +47,7 @@ const CustomModal = () => {
             className="absolute right-4 top-4"
             onClick={() => dispatch(deleteCurrentB())}
           >
-            X
+            <IoMdClose size="26px" />
           </button>
           <OrderForm onClose={() => dispatch(deleteCurrentB())} />
         </div>
