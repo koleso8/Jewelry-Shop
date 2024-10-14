@@ -44,8 +44,10 @@ const slice = createSlice({
     },
     addToCurrentB: (state, { payload }) => {
       state.currentItems = [...payload];
+      document.body.style.overflow = 'hidden';
     },
     deleteCurrentB: state => {
+      document.body.style.overflow = 'unset';
       state.currentItems = [];
     },
   },

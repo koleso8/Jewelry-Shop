@@ -49,8 +49,7 @@ const CustomModal = () => {
           >
             X
           </button>
-          <p>modal</p>
-          <OrderForm />
+          <OrderForm onClose={() => dispatch(deleteCurrentB())} />
         </div>
       </>
     </Modal>,
