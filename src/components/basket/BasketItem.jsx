@@ -13,8 +13,12 @@ const BasketItem = ({ item }) => {
 
   return (
     <li className=" w-full bg-white rounded-lg flex h-20 justify-between items-start font-bold md:h-28 ">
-      <img className="h-full rounded-lg" src={item.img} alt={item.alt} />
-      <div className="flex flex-col justify-around w-[60%] h-full lg:flex-row lg:items-center lg:w-[80%] ">
+      <img
+        className="h-full rounded-lg lg:w-[230px]"
+        src={item.img}
+        alt={item.alt}
+      />
+      <div className="flex flex-col justify-between pr-8 w-[60%] h-full lg:flex-row lg:items-center lg:w-[80%] ">
         <h3 className="first-letter:capitalize font-bold text-lg underline md:text-2xl lg:text-3xl ">
           {item.title}
         </h3>
@@ -24,12 +28,14 @@ const BasketItem = ({ item }) => {
           </p>
 
           <span className="flex gap-2 md:text-2xl lg:text-3xl">
-            <button
-              className="px-2 border rounded-lg bg-slate-100"
-              onClick={() => dispatch(minusCount(item.id))}
-            >
-              -
-            </button>
+            {item.count > 1 && (
+              <button
+                className="px-2 border rounded-lg bg-slate-100"
+                onClick={() => dispatch(minusCount(item.id))}
+              >
+                -
+              </button>
+            )}
             {item.count}
             <button
               className="px-2 border rounded-lg bg-slate-100"

@@ -30,8 +30,8 @@ const slice = createSlice({
     minusCount: (state, action) => {
       state.items.map(item =>
         item.id === action.payload
-          ? item.count === 0
-            ? 0
+          ? item.count === 1
+            ? 1
             : (item.count -= 1)
           : item
       );

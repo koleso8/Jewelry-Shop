@@ -8,11 +8,9 @@ import { IoMdClose } from 'react-icons/io';
 // import { selectCurrentItem } from '../redux/catalogItems/selectors';
 
 const CustomModal = () => {
-  const modalRoot = document.getElementById('modal-root');
   const current = !!useSelector(selectCurrentItems).length;
   const dispatch = useDispatch();
-
-  return createPortal(
+  return (
     <Modal
       isOpen={current}
       style={{
@@ -40,6 +38,7 @@ const CustomModal = () => {
       }}
       className=" flex justify-center items-center"
       ariaHideApp={false}
+      onRequestClose={() => dispatch(deleteCurrentB())}
     >
       <>
         <div className="">
@@ -52,8 +51,7 @@ const CustomModal = () => {
           <OrderForm onClose={() => dispatch(deleteCurrentB())} />
         </div>
       </>
-    </Modal>,
-    modalRoot
+    </Modal>
   );
 };
 
