@@ -3,7 +3,7 @@ import { scrollToTop } from '../helpers/scrollToTop';
 
 const Contacts = () => {
   useEffect(() => scrollToTop());
-  return <div>contacts</div>;
+  return <div>contact</div>;
 };
 
 export default Contacts;
