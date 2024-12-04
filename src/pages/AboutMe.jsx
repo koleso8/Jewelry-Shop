@@ -3,7 +3,7 @@ import { scrollToTop } from '../helpers/scrollToTop';
 
 const AboutMe = () => {
   useEffect(() => scrollToTop());
-  return <div>About me</div>;
+  return <div>About Mee</div>;
 };
 
 export default AboutMe;
